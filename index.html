@@ -25,7 +25,14 @@ navbar_title: Home
                         <p class="small text-muted mb-1">{{ item.date }}</p>
                     </div>
                     {% if item.previous %}<p class="small text-muted mb-1">{{ item.previous }}</p>{% endif %}
-                    <p class="mb-0">{{ item.summary }}</p>
+                    <p class="{% if item.highlights %}mb-2{% else %}mb-0{% endif %}">{{ item.summary }}</p>
+                    {% if item.highlights %}
+                    <ul class="pl-3 mb-0">
+                        {% for highlight in item.highlights %}
+                        <li{% unless forloop.last %} class="mb-2"{% endunless %}>{{ highlight }}</li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
                 </article>
                 {% endfor %}
             </div>

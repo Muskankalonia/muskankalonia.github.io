@@ -3,16 +3,27 @@
   previous: Previously Software Engineer
   date: July 2023–Present
   summary: >-
-    I build SaaS data-security connectors, Kafka pipelines, and distributed quota controls, and work on observability and tenant lifecycle management. Moving Google Drive asset discovery to event-driven ingestion cut latency from 15–60 minutes to under five minutes.
+    I build distributed systems for SaaS data protection, with a focus on asset ingestion, policy enforcement, and reliability.
+  highlights:
+    - >-
+      Migrated Google Drive asset discovery from scheduled per-user scans to event-driven Kafka ingestion with retry and concurrency controls. Cut the time for assets to become visible from 15–60 minutes to under five minutes.
+    - >-
+      Built data-security connectors for Salesforce Files, Claude Code, and Slack to detect sensitive data and trigger policy-based remediation. Developed a reusable polling framework and PostgreSQL-backed discovery for Slack direct messages.
+    - >-
+      Decoupled MongoDB writes from Elasticsearch indexing with Kafka queues and concurrent workers, buffering indexing operations during Elasticsearch outages.
+    - >-
+      Built distributed quota enforcement with gRPC, Redis/Lua, and C++/WASM. Contributed to FIPS/TLS hardening and operational observability using OpenTelemetry, Prometheus, and Grafana.
+    - >-
+      Diagnosed a real-time policy processing bottleneck and reduced the backlog from about 2 million events to 1,000–2,000. Moved CPU-intensive file-type detection into a Kafka Streams service to isolate it from asset scanning.
 
 - organization: Palo Alto Networks
   role: Software Engineer Intern
   date: January–July 2023
   summary: >-
-    I worked on tenant deprovisioning and backend automation for tenant cleanup.
+    I worked on backend automation for tenant offboarding, including deprovisioning tasks that ran across services. Across my Palo Alto Networks roles, I designed an asynchronous workflow with Amazon SQS and coordinated cleanup of more than 600 obsolete tenants, freeing about 75,000 Elasticsearch shards.
 
 - organization: Schlumberger
   role: Software Engineering Intern
   date: June–July 2022
   summary: >-
-    I used weight and neuron pruning to cut a seismic CNN’s size to about one-third and make it roughly 3× faster, with about 2% accuracy loss.
+    I applied weight and neuron pruning to a convolutional neural network for seismic data. The pruned model was about one-third the size and ran roughly 3× faster, with about a 2% drop in accuracy. I generalized the pruning utilities so they could be used with other network architectures.
