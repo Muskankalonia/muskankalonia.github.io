@@ -1,0 +1,18 @@
+- organization: Palo Alto Networks
+  role: Software Engineer II
+  previous: Previously Software Engineer
+  date: July 2023–Present
+  summary: >-
+    I build SaaS data-security connectors, Kafka pipelines, and distributed quota controls, and work on observability and tenant lifecycle management. Moving Google Drive asset discovery to event-driven ingestion cut latency from 15–60 minutes to under five minutes.
+
+- organization: Palo Alto Networks
+  role: Software Engineer Intern
+  date: January–July 2023
+  summary: >-
+    I worked on tenant deprovisioning and backend automation for tenant cleanup.
+
+- organization: Schlumberger
+  role: Software Engineering Intern
+  date: June–July 2022
+  summary: >-
+    I used weight and neuron pruning to cut a seismic CNN’s size to about one-third and make it roughly 3× faster, with about 2% accuracy loss.

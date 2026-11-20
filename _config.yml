@@ -1,0 +1,17 @@
+title: Muskan
+description: "Muskan, Software Engineer II at Palo Alto Networks and independent researcher in AI-agent security."
+url: "https://muskankalonia.github.io"
+baseurl: ""
+
+markdown: kramdown
+theme: null
+
+collections:
+  - publications
+  - showcase
+
+exclude:
+  - Muskan.pdf
+  - README.md
+  - Gemfile
+  - Gemfile.lock

@@ -1,0 +1,34 @@
+<aside class="sticky-top profile-card" aria-label="Profile">
+    <div class="card border-0 shadow-sm bg-white text-center">
+        <div class="card-body px-3 py-4">
+            <h1 class="h4 mb-2">{{ site.data.profile.primary_name }}</h1>
+
+            <p class="small mb-2">
+                {% for position in site.data.profile.positions %}
+                {{ position.name }}{% unless forloop.last %}<br>{% endunless %}
+                {% endfor %}
+            </p>
+
+            {% if site.data.profile.email %}
+            <p class="small mb-2">
+                <a class="email-text" href="mailto:{{ site.data.profile.email | escape }}">
+                    {{ site.data.profile.email | replace: "@", "(at)" }}
+                </a>
+            </p>
+            {% endif %}
+
+            <div class="h4 mb-0 pt-1">
+                {% if site.data.profile.github %}
+                <a class="px-1" aria-label="GitHub" href="https://github.com/{{ site.data.profile.github }}">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+                {% endif %}
+                {% if site.data.profile.linkedin %}
+                <a class="px-1" aria-label="LinkedIn" href="https://www.linkedin.com/in/{{ site.data.profile.linkedin }}/">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</aside>

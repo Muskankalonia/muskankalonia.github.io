@@ -1,0 +1,9 @@
+<section class="my-3 p-0 bg-white shadow-sm rounded-xl" aria-labelledby="research-heading">
+    <div class="d-flex flex-wrap align-items-baseline justify-content-between border-bottom p-3">
+        <h2 id="research-heading" class="h5 mb-0">Research &amp; Publications</h2>
+        <a class="small" href="{{ '/publications/' | relative_url }}">All publications</a>
+    </div>
+    {% for item in include.publications %}
+        {% include widgets/publication_item.html item=item hide_bottom_border=forloop.last %}
+    {% endfor %}
+</section>

@@ -1,0 +1,49 @@
+---
+layout: default
+title: Publications
+navbar_title: Publications
+permalink: /publications/
+description: "Muskan’s published papers and current manuscript on LLM-agent security and résumé classification."
+---
+
+{% assign published = site.publications | where: "status", "Published" | sort: "date" | reverse %}
+{% assign pubs_by_year = published | group_by_exp: "item", "item.date | date: '%Y'" %}
+{% assign manuscripts = site.publications | where: "status", "Under review" | sort: "order" %}
+
+<div class="row">
+    <div class="col-12 col-lg-10">
+        <h1 class="h2 mb-4">Publications</h1>
+        {% for year in pubs_by_year %}
+        <section class="mb-4" aria-labelledby="year-{{ year.name }}">
+            <h2 class="h4" id="year-{{ year.name }}">{{ year.name }}</h2>
+            <div class="bg-white shadow-sm rounded-xl">
+                {% for item in year.items %}
+                {% include widgets/publication_item.html item=item hide_bottom_border=forloop.last %}
+                {% endfor %}
+            </div>
+        </section>
+        {% endfor %}
+
+        {% if manuscripts.size > 0 %}
+        <section aria-labelledby="under-review">
+            <h2 class="h4" id="under-review">Under Review</h2>
+            <div class="bg-white shadow-sm rounded-xl">
+                {% for item in manuscripts %}
+                {% include widgets/publication_item.html item=item hide_bottom_border=forloop.last %}
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
+    </div>
+
+    <div class="col-2 d-none d-lg-block">
+        <nav aria-label="Publication sections" class="nav nav-pills flex-column sticky-top publication-nav">
+            {% for year in pubs_by_year %}
+            <a class="nav-link" href="#year-{{ year.name }}">{{ year.name }}</a>
+            {% endfor %}
+            {% if manuscripts.size > 0 %}
+            <a class="nav-link" href="#under-review">Under Review</a>
+            {% endif %}
+        </nav>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+---
+layout: default
+title: Selected Projects
+navbar_title: Projects
+permalink: /projects/
+description: "Selected engineering projects by Muskan, including Nocturne, Dark Fire, and PanAlyzer."
+---
+
+<h1 class="h2 mb-4">Selected Projects</h1>
+{% assign projects = site.showcase | sort: "order" %}
+<div class="row">
+    {% for item in projects %}
+    <div class="col-md-6 col-xl-4 mb-3">
+        <article class="card border-0 shadow-sm bg-white h-100" id="{{ item.slug }}">
+            <div class="card-body p-4 d-flex flex-column">
+                <div class="d-flex justify-content-between align-items-baseline">
+                    <h2 class="h5 mb-1">{{ item.title }}</h2>
+                    <span class="small text-muted">{{ item.year }}</span>
+                </div>
+                <p class="font-weight-bold mb-2">{{ item.subtitle }}</p>
+                {% if item.award %}<p class="small mb-0">{{ item.award }}</p>{% endif %}
+                {% if item.result %}<p class="small text-muted mb-3">{{ item.result }}</p>{% endif %}
+                {{ item.content }}
+                {% if item.repository %}
+                <a class="small mt-auto align-self-start" href="{{ item.repository }}"><i class="fab fa-github mr-1" aria-hidden="true"></i>Code on GitHub</a>
+                {% endif %}
+            </div>
+        </article>
+    </div>
+    {% endfor %}
+</div>
