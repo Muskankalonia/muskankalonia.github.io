@@ -2,6 +2,7 @@
 title: "Resume Classification using Elite Bag-of-Words Approach"
 date: 2023-01-01
 order: 4
+icon: fa-layer-group
 authors:
   - Muskan Sharma
   - Gargi Choudhary

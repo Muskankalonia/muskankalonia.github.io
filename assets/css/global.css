@@ -191,8 +191,32 @@ footer a {
     font-size: 0.9375rem;
 }
 
-.bubble-visual-hash {
-    opacity: 0.75;
+.publication-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 3 / 2;
+    border-radius: 0.5rem;
+    background-color: #eaf2fa;
+    color: #245983;
+    font-size: 1.75rem;
+}
+
+@media (max-width: 767.98px) {
+    .publication-media {
+        flex: 0 0 3rem;
+        max-width: 3rem;
+    }
+
+    .publication-text {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+
+    .publication-icon {
+        aspect-ratio: 1;
+        font-size: 1rem;
+    }
 }
 
 .review-status {

@@ -2,6 +2,7 @@
 title: "Uniqueness meets Semantics: A Novel Semantically Meaningful Bag-of-Words Approach for Matching Resumes to Job Profiles"
 date: 2024-06-09
 order: 3
+icon: fa-file-circle-check
 authors:
   - Seba Susan
   - Muskan Sharma

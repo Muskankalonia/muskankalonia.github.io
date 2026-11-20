@@ -1,6 +1,7 @@
 ---
 title: "Who Controls the Agent? Detecting Mid-Session Operator Takeover in Authenticated AI-Agent Sessions via Online Change-Point Detection"
 order: 2
+icon: fa-user-shield
 authors:
   - Muskan Sharma
   - Seba Susan

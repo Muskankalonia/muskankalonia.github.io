@@ -2,6 +2,7 @@
 title: "Beyond the Login: Continuous Behavioral Authorship Verification for LLM Agent Sessions"
 date: 2026-11-01
 order: 1
+icon: fa-fingerprint
 authors:
   - Muskan Sharma
   - Seba Susan
