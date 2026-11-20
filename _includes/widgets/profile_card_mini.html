@@ -1,6 +1,10 @@
 <aside class="sticky-top profile-card" aria-label="Profile">
     <div class="card border-0 shadow-sm bg-white text-center">
         <div class="card-body px-3 py-4">
+            {% if site.data.profile.portrait_url %}
+            <img class="profile-portrait mb-3" src="{{ site.data.profile.portrait_url | relative_url }}"
+                 width="480" height="640" alt="Portrait of {{ site.data.profile.primary_name | escape }}">
+            {% endif %}
             <h1 class="h4 mb-2">{{ site.data.profile.primary_name }}</h1>
 
             <p class="small mb-2">

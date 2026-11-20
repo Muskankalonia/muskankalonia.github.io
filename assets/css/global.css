@@ -156,6 +156,24 @@ div.lazy {
     top: 5rem;
 }
 
+.profile-portrait {
+    display: block;
+    width: 100%;
+    max-width: 13rem;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-inline: auto;
+}
+
+@media (max-width: 767.98px) {
+    .profile-portrait {
+        max-width: 7.5rem;
+        border-radius: 50%;
+    }
+}
+
 .email-text {
     overflow-wrap: anywhere;
 }
